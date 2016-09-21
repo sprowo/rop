@@ -13,6 +13,7 @@
     <orderEntry type="module" module-name="rop-api" />
     <orderEntry type="module" module-name="rop-service" />
     <orderEntry type="module" module-name="rop-persistence" />
+    <orderEntry type="module" module-name="rop-common" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.11" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
@@ -24,5 +25,57 @@
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: commons-codec:commons-codec:1.6" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-core:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-web:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:4.3.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-redis:1.7.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-keyvalue:1.1.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.12.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-oxm:4.2.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-context-support:4.2.6.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.21" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:jcl-over-slf4j:1.7.21" level="project" />
+    <orderEntry type="library" name="Maven: redis.clients:jedis:2.6.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.commons:commons-pool2:2.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.2.1" level="project" />
+    <orderEntry type="library" name="Maven: com.caucho:hessian:4.0.7" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.struts:struts2-spring-plugin:2.3.16.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.struts:struts2-core:2.3.16.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.struts.xwork:xwork-core:2.3.16.2" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm:3.3" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm-commons:3.3" level="project" />
+    <orderEntry type="library" name="Maven: asm:asm-tree:3.3" level="project" />
+    <orderEntry type="library" name="Maven: org.freemarker:freemarker:2.3.19" level="project" />
+    <orderEntry type="library" name="Maven: ognl:ognl:3.0.6" level="project" />
+    <orderEntry type="library" name="Maven: javassist:javassist:3.11.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: commons-fileupload:commons-fileupload:1.3.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.2" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.sun:tools:1.5.0">
+        <CLASSES>
+          <root url="jar://D:/Program Files/Java/jdk1.6.0_45/jre/../lib/tools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Maven: org.apache.struts:struts2-convention-plugin:2.3.16.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.struts:struts2-json-plugin:2.3.16.2" level="project" />
+    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils:1.8.3" level="project" />
+    <orderEntry type="library" name="Maven: commons-dbcp:commons-dbcp:1.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-pool:commons-pool:1.5.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-configuration:commons-configuration:1.6" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.4" level="project" />
+    <orderEntry type="library" name="Maven: commons-digester:commons-digester:1.8" level="project" />
+    <orderEntry type="library" name="Maven: commons-beanutils:commons-beanutils-core:1.8.0" level="project" />
+    <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.8" level="project" />
+    <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.2.3" level="project" />
+    <orderEntry type="library" name="Maven: com.whalin:Memcached-Java-Client:3.0.0" level="project" />
   </component>
 </module>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<settings>
+		<setting name="logImpl" value="LOG4J" />
+	</settings>
+
+	<typeAliases>
+	</typeAliases>
+
+	<!-- 分页拦截器 mysql or oracle -->
+	<plugins>
+		<plugin interceptor="com.prowo.db.mysql.interceptor.PageInterceptor">
+			<property name="databaseDialect" value="com.prowo.db.mysql.dialet.MySQLDialect" />
+			<property name="pageSqlIdRegEx" value=".*ByPage" />
+		</plugin>
+	</plugins>
+	<!-- dao映射 -->
+	<mappers>
+	</mappers>
+</configuration>

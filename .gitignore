@@ -1,1 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
+rop-common/target/
+rop-core/target/
+rop-service/target/
+rop-api/target/
+rop-persistence/target/

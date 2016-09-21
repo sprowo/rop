@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<!--开发模式设置开始 //-->
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++开发状态 -->
+	<constant name="struts.devMode" value="false" />
+	<!-- 国际化资源重新加载  -->
+	<constant name="struts.i18n.reload" value="false" />
+	<!-- 配置文件重新加载 -->
+	<constant name="struts.configuration.xml.reload" value="false" />
+	<!-- convention类从新加载 -->
+	<constant name="struts.convention.classes.reload" value="false" />
+	<!--++++++++++++++++++++++++++++++++++++++++++++++++开发模式结束 -->
+	<!-- 主题 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- 地区 -->
+	<constant name="struts.locale" value="zh_CN" />
+	<!-- 国际化编码 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!--  扩展-->
+	<constant name="struts.action.extension" value="action,do,jsp" />
+	<!-- 启用动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<!-- 设置Struts 2是否允许在Action名中使用斜线 -->
+	<constant name="struts.enable.SlashesInActionNames" value="false" />
+	<!-- 结果资源所在路径 -->
+	<constant name="struts.convention.result.path" value="/WEB-INF/pages"/>
+	<!-- action后缀 -->
+	<constant name="struts.convention.action.suffix" value="Action"/>
+	<!-- 名称首字母小写 -->
+    <constant name="struts.convention.action.name.lowercase" value="true"/>
+    <!-- 分隔符 一个action名字的获取。比如为HelloWorldAction。按照配置，actionName为hello_world。 -->
+    <constant name="struts.convention.action.name.separator" value="_"/>
+    <!-- 禁用扫描 -->
+    <constant name="struts.convention.action.disableScanning" value="false"/>
+    <!-- 默认包 -->
+    <!-- <constant name="struts.convention.default.parent.package" value="rest-default"/> -->
+    <!--确定搜索包的路径。只要是结尾为action的包都要搜索。basePackage按照默认不用配置，如果配置，只会找以此配置开头的包。locators及locators.basePackage都是一组以逗号分割的字符串。 -->
+    <constant name="struts.convention.package.locators" value="web,sweb,action"/>
+    <!-- 禁用包搜索 -->
+    <constant name="struts.convention.package.locators.disable" value="false"/>
+    <!-- 基于什么包 -->
+    <constant name="struts.convention.package.locators.basePackage" value="com.prowo.rop.web"/>
+    <!--  排除的包 -->
+    <constant name="struts.convention.exclude.packages" value="org.apache.struts.*,org.apache.struts2.*,org.springframework.web.struts.*,org.springframework.web.struts2.*,org.hibernate.*"/>
+    <!-- 包含的包 -->
+    <!-- 包括的jar,一般用于大型项目，其action一般打包成jar
+    <constant name="struts.convention.action.includeJars" value=".*?/client-service-0.0.1-SNAPSHOT.jar(!/)?" /> -->
+    <!-- 结果类型 -->
+    <constant name="struts.convention.relative.result.types" value="dispatcher,freemarker"/>
+    <!--
+     如果此值设为true，如果一个action的命名空间为/login，名称为HelloWorldAction。result返回值是success，默认会找到/WEB-INF/pages/login/hello_world.jsp（如果有hello_world_success.jsp就找这个文件，连接符“_”是在<constant name="struts.convention.action.name.separator" value="_"/>中配置的）。如果有一个action的result返回值是“error”，就会找/WEB-INF/pages /login/hello_world_error.jsp。
+
+      如果此值设为false，如果一个action的命名空间为/login，名称为HelloWorldAction。result返回值是success，默认会找到/WEB- INF/pages/login/hello_world/index.jsp（如果有success.jsp就找这个文件）。如果有一个action的result返回值是“error”，就会找/WEB-INF/pages /login/hello_world/error.jsp。
+     -->
+    <constant name="struts.convention.result.flatLayout" value="true"/>
+    <constant name="struts.convention.action.mapAllMatches" value="false"/>
+    <!-- 检查是否实现action -->
+    <constant name="struts.convention.action.checkImplementsAction" value="true"/>
+    <constant name="struts.mapper.alwaysSelectFullNamespace" value="false"/>
+	<constant name="struts.convention.redirect.to.slash" value="true"/>
+	<!-- 静态方法使用 -->
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+
+	<package name="ropContextInterceptorPackage" namespace="/ropInterceptor" extends="struts-default">
+	      <interceptors>
+	      	<interceptor name="ropInterceptor" class="com.prowo.rop.intercept.RopContextIntercept"/>
+			<!-- <interceptor name="cacheInterceptor" class="com.prowo.rop.intercept.CacheInterceptor"/> -->
+			<interceptor name="logInterceptor" class="com.prowo.rop.intercept.LogInterceptor" />
+	      	<interceptor-stack name="clientDefaultStack">
+	      	 	<interceptor-ref name="ropInterceptor" />
+	      	 	<interceptor-ref name="logInterceptor" />
+	      	</interceptor-stack>
+	      </interceptors>
+	      <default-interceptor-ref name="clientDefaultStack" />
+	</package>
+</struts>
